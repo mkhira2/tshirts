@@ -1,0 +1,163 @@
+/*
+blue === skyblue
+pink === palevioletred
+orange === burlywood
+*/
+
+
+
+/*------------
+ALWAYS INCLUDE
+-------------*/
+
+
+
+* {
+	box-sizing: border-box;
+	color: skyblue;
+	font-size: 0;
+	/*border: 2px solid red;*/
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+/*-----------
+INITIAL SETUP
+-----------*/
+
+
+
+/*push all elements down from top of viewport*/
+#container {
+	padding: 5% 0;
+}
+
+.main-box {
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	margin: 10px;
+}
+
+.tshirt {
+	padding: 30px;
+	border: 3px solid skyblue;
+	width: 100%;
+	border-bottom: none;
+}
+
+/*set flip box in upper right corner*/
+.flip {
+	position: absolute;
+	border: 2px solid skyblue;
+	right: 0;
+	border-right: none;
+	border-top: none;
+	font-size: 18px;
+}
+
+/*center icon in flip box*/
+.flip > .fa {
+	padding: 8px;
+}
+
+.icon-box {
+	border-right: 3px solid lightblue;
+}
+
+/*center icons horizontally*/
+.icon {
+	height: 40px;
+    display: inline-block;
+    width: 20%;
+    border: 3px solid lightblue;
+    border-right: none;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px
+}
+
+/*center icons vertically*/
+.fa {
+	padding-top: 3px;
+}
+
+/*blue-square is deafult; no id given*/
+#pink-square {
+	color: palevioletred;
+}
+
+#orange-square {
+	color: burlywood;
+}
+
+/*create space below icon-box*/
+.label-box {
+	padding: 20px 0 40px 0;
+}
+
+.name, .price {
+	display: inline-block;
+	width: 50%;
+	font-size: 24px;
+	font-family: Helvetica;
+}
+
+.price {
+	font-weight: bolder;
+	text-align: right;
+}
+
+
+
+/*-----------------------
+ANIMATION AND INTERACTION
+-----------------------*/
+
+
+
+.icon:hover {
+	background: skyblue;
+	color: white;
+	cursor: pointer;
+}
+
+.icon:hover > .fa {
+    color:white;
+}
+
+.flip:hover {
+	background: skyblue;
+	color: white;
+	cursor: pointer;
+}
+
+.flip:hover > .fa {
+	color: white;
+}
+
+
+
+/*-----------
+MEDIA QUERIES
+-----------*/
+
+
+
+@media (max-width: 1050px) {
+    .main-box {
+        width: 45%;
+        display:inline-block;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-box {
+        width: 45%;
+        display:block;
+        margin: 1% auto;
+    }
