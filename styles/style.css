@@ -2,6 +2,7 @@
 blue === skyblue
 pink === palevioletred
 orange === burlywood
+green === darkseagreen
 */
 
 
@@ -86,13 +87,19 @@ INITIAL SETUP
 	padding-top: 3px;
 }
 
-/*blue-square is deafult; no id given*/
+#blue-square {
+	color: skyblue;
+}
 #pink-square {
 	color: palevioletred;
 }
 
 #orange-square {
 	color: burlywood;
+}
+
+#green-square {
+	color: darkseagreen;
 }
 
 /*create space below icon-box*/
@@ -114,15 +121,14 @@ INITIAL SETUP
 
 
 
-/*-----------------------
-ANIMATION AND INTERACTION
------------------------*/
+/*--------------
+HOVER ANIMATIONS
+--------------*/
 
 
 
 .icon:hover {
 	background: skyblue;
-	color: white;
 	cursor: pointer;
 }
 
@@ -140,6 +146,59 @@ ANIMATION AND INTERACTION
 	color: white;
 }
 
+
+
+/*----------------
+SHOW HIDDEN SHIRTS
+----------------*/
+
+.icon:nth-child(3) {
+    position: relative;
+}
+
+.icon:hover > .hidden-shirts {
+    display:block;
+}
+
+.hidden-shirts div:hover {
+    background-color:lightblue;
+}
+
+.hidden-shirts {
+    display:none;
+    position: absolute;
+    border: 3px solid skyblue;
+    background-color: white;
+    width:100%;
+    border-bottom: none;
+    bottom: 100%;
+}
+
+.hidden-shirts div .fa {
+    font-size: 28px;
+}
+
+.hidden-shirts div .fa-4x {
+    font-size:24px;
+}
+
+.hidden-shirts div .fa-3x {
+    font-size: 20px;
+}
+
+.hidden-shirts div .fa-2x {
+    font-size: 16px;
+}
+
+.hidden-colors {
+    display:none;
+    position: absolute;
+    border: 3px solid skyblue;
+    background-color: white;
+    width:100%;
+    border-bottom: none;
+    bottom: 100%;
+}
 
 
 /*-----------
