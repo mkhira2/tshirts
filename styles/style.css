@@ -85,7 +85,7 @@ h1 {
     border-right: none;
     text-align: center;
     font-size: 18px;
-    padding-top: 5px
+    padding-top: 5px;
 }
 
 /*center icons vertically*/
@@ -160,19 +160,25 @@ HOVER ANIMATIONS
     color: red;
 }
 
+.icon:hover #blue-square {
+    color: blue;
+}
+
 
 
 /*------------------------------
 SHOW HIDDEN SIZE OPTIONS
 ------------------------------*/
 
+
+
 .icon:nth-child(3) {
     position: relative;
 }
 
+/*reveals size drop down menu*/
 .icon:hover > .hidden-shirts {
     display: block;
-    visibility: visible;
 }
 
 .hidden-shirts .fa:hover {
@@ -180,13 +186,13 @@ SHOW HIDDEN SIZE OPTIONS
 }
 
 .hidden-shirts {
-    visibility: hidden;
+    display: none;
     position: absolute;
     border: 3px solid skyblue;
     background-color: white;
     width: 100%;
-    border-bottom: none;
-    bottom: 110%;
+    bottom: 100%;
+    animation: slide-down .4s;
 }
 
 .hidden-shirts div .fa {
@@ -210,18 +216,42 @@ SHOW HIDDEN SIZE OPTIONS
     margin-bottom: 16px;
 }
 
+/*controls animation for size and color drop down menu*/
+@keyframes slide-down {
+    0% {bottom: 60px;}
+    100% {bottom: 34px;}
+}
+
+/*adds bottom border to drop down menus*/
+.hidden-shirts:after, .hidden-colors:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 6px white;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+}
+
+
 
 /*------------------------------
 SHOW HIDDEN COLOR OPTIONS
 ------------------------------*/
 
+
+
 .icon:nth-child(4) {
     position: relative;
 }
 
+/*reveals color drop down menu*/
 .icon:hover > .hidden-colors {
     display: block;
-    visibility: visible;
 }
 
 .hidden-colors div:hover {
@@ -229,13 +259,13 @@ SHOW HIDDEN COLOR OPTIONS
 }
 
 .hidden-colors {
-    visibility: hidden;
+    display: none;
     position: absolute;
     border: 3px solid skyblue;
     background-color: white;
     width: 100%;
-    border-bottom: none;
-    bottom: 110%;
+    bottom: 100%;
+    animation: slide-down .4s 1;
 }
 
 .blue, .pink, .orange, .green {
@@ -262,6 +292,8 @@ SHOW HIDDEN COLOR OPTIONS
     background-color: darkseagreen;
 }
 
+
+
 /*------------------------------
 MEDIA QUERIES
 ------------------------------*/
@@ -282,6 +314,8 @@ MEDIA QUERIES
         margin: 1% auto;
     }
 }
+
+
 
 /*
 blue === skyblue
