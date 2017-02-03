@@ -8,7 +8,7 @@ ALWAYS INCLUDE
 	box-sizing: border-box;
 	color: skyblue;
 	font-size: 0;
-	/*border: 2px solid red;*/
+	/*border: 2px dotted red;*/
 }
 
 img {
@@ -26,6 +26,21 @@ INITIAL SETUP
 /*push all elements down from top of viewport*/
 #container {
 	padding: 5% 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin: -15px;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    text-align: center;
 }
 
 .main-box {
@@ -103,9 +118,12 @@ INITIAL SETUP
 	display: inline-block;
 	width: 50%;
 	font-size: 24px;
-	font-family: Helvetica;
+	font-family: 'Lato', sans-serif;
 }
 
+.name {
+    text-align: left;
+}
 .price {
 	font-weight: bolder;
 	text-align: right;
@@ -125,7 +143,7 @@ HOVER ANIMATIONS
 }
 
 .icon:hover > .fa {
-    color:white;
+    color: white;
 }
 
 .flip:hover {
@@ -136,6 +154,10 @@ HOVER ANIMATIONS
 
 .flip:hover > .fa {
 	color: white;
+}
+
+.icon:hover > .fa-heart-o {
+    color: red;
 }
 
 
@@ -150,36 +172,42 @@ SHOW HIDDEN SIZE OPTIONS
 
 .icon:hover > .hidden-shirts {
     display: block;
+    visibility: visible;
 }
 
-.hidden-shirts div:hover {
-    background-color: lightblue
+.hidden-shirts .fa:hover {
+    transform:scale(1.5);
 }
 
 .hidden-shirts {
-    display: none;
+    visibility: hidden;
     position: absolute;
     border: 3px solid skyblue;
     background-color: white;
-    width:100%;
+    width: 100%;
     border-bottom: none;
     bottom: 110%;
 }
 
 .hidden-shirts div .fa {
     font-size: 28px;
+    margin: 8px;
 }
 
 .hidden-shirts div .fa-4x {
-    font-size:24px;
+    font-size: 24px;
+    margin: 8px;
 }
 
 .hidden-shirts div .fa-3x {
     font-size: 20px;
+    margin: 8px;
 }
 
 .hidden-shirts div .fa-2x {
     font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 
@@ -193,15 +221,15 @@ SHOW HIDDEN COLOR OPTIONS
 
 .icon:hover > .hidden-colors {
     display: block;
+    visibility: visible;
 }
 
 .hidden-colors div:hover {
-    height: 22px;
-    width: 22px;
+    transform: scale(1.1);
 }
 
 .hidden-colors {
-    display: none;
+    visibility: hidden;
     position: absolute;
     border: 3px solid skyblue;
     background-color: white;
@@ -250,7 +278,7 @@ MEDIA QUERIES
 @media (max-width: 700px) {
     .main-box {
         width: 70%;
-        display:block;
+        display: block;
         margin: 1% auto;
     }
 }
