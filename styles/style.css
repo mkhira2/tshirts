@@ -1,31 +1,28 @@
-/*------------------------------
+/*--------------------------------------------------
 ALWAYS INCLUDE
-------------------------------*/
-
-
+--------------------------------------------------*/
 
 * {
-	box-sizing: border-box;
-	color: skyblue;
-	font-size: 0;
-	/*border: 2px dotted red;*/
+    box-sizing: border-box;
+    color: skyblue;
+    font-size: 0;
+    /*border: 2px dotted red;*/
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 
-
-/*------------------------------
-INITIAL SETUP
-------------------------------*/
-
+/*--------------------------------------------------
+INITAL SETUP
+--------------------------------------------------*/
 
 
 /*push all elements down from top of viewport*/
+
 #container {
-	padding: 5% 0;
+    padding: 5% 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -44,41 +41,47 @@ h1 {
 }
 
 .main-box {
-	display: inline-block;
-	position: relative;
-	width: 30%;
-	margin: 10px;
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    margin: 10px;
 }
 
 .tshirt {
-	padding: 30px;
-	border: 3px solid skyblue;
-	width: 100%;
-	border-bottom: none;
+    padding: 30px;
+    border: 3px solid skyblue;
+    width: 100%;
+    border-bottom: none;
 }
+
 
 /*set flip box in upper right corner*/
+
 .flip {
-	position: absolute;
-	border: 3px solid skyblue;
-	right: 0;
-	/*border-right: none;*/
-	/*border-top: none;*/
-	font-size: 18px;
+    position: absolute;
+    border: 3px solid skyblue;
+    right: 0;
+    /*border-right: none;*/
+    /*border-top: none;*/
+    font-size: 18px;
 }
 
+
 /*center icon in flip box*/
+
 .flip > .fa {
-	padding: 8px;
+    padding: 8px;
 }
 
 .icon-box {
-	border-right: 3px solid skyblue;
+    border-right: 3px solid skyblue;
 }
 
+
 /*center icons horizontally*/
+
 .icon {
-	height: 40px;
+    height: 40px;
     display: inline-block;
     width: 20%;
     border: 3px solid skyblue;
@@ -88,58 +91,61 @@ h1 {
     padding-top: 5px;
 }
 
+
 /*center icons vertically*/
+
 .fa {
-	padding-top: 3px;
+    padding-top: 3px;
 }
 
 #blue-square {
-	color: skyblue;
+    color: skyblue;
 }
 
 #pink-square {
-	color: palevioletred;
+    color: palevioletred;
 }
 
 #orange-square {
-	color: burlywood;
+    color: burlywood;
 }
 
 #green-square {
-	color: darkseagreen;
+    color: darkseagreen;
 }
+
 
 /*create space below icon-box*/
+
 .label-box {
-	padding: 20px 0 40px 0;
+    padding: 20px 0 40px 0;
 }
 
-.name, .price {
-	display: inline-block;
-	width: 50%;
-	font-size: 24px;
-	font-family: 'Lato', sans-serif;
+.name,
+.price {
+    display: inline-block;
+    width: 50%;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
 }
 
 .name {
     text-align: left;
 }
+
 .price {
-	font-weight: bolder;
-	text-align: right;
+    font-weight: bolder;
+    text-align: right;
 }
 
 
-
-/*------------------------------
+/*--------------------------------------------------
 HOVER ANIMATIONS
-------------------------------*/
-
-
+--------------------------------------------------*/
 
 .icon:hover {
-	background: skyblue;
-	cursor: pointer;
+    background: skyblue;
+    cursor: pointer;
 }
 
 .icon:hover > .fa {
@@ -147,13 +153,13 @@ HOVER ANIMATIONS
 }
 
 .flip:hover {
-	background: skyblue;
-	color: white;
-	cursor: pointer;
+    background: skyblue;
+    color: white;
+    cursor: pointer;
 }
 
 .flip:hover > .fa {
-	color: white;
+    color: white;
 }
 
 .icon:hover > .fa-heart-o {
@@ -165,24 +171,23 @@ HOVER ANIMATIONS
 }
 
 
-
-/*------------------------------
+/*--------------------------------------------------
 SHOW HIDDEN SIZE OPTIONS
-------------------------------*/
-
-
+--------------------------------------------------*/
 
 .icon:nth-child(3) {
     position: relative;
 }
 
+
 /*reveals size drop down menu*/
+
 .icon:hover > .hidden-shirts {
     display: block;
 }
 
 .hidden-shirts .fa:hover {
-    transform:scale(1.5);
+    transform: scale(1.5);
 }
 
 .hidden-shirts {
@@ -216,15 +221,24 @@ SHOW HIDDEN SIZE OPTIONS
     margin-bottom: 16px;
 }
 
+
 /*controls animation for size and color drop down menu*/
+
 @keyframes slide-down {
-    0% {bottom: 60px;}
-    100% {bottom: 34px;}
+    0% {
+        bottom: 60px;
+    }
+    100% {
+        bottom: 34px;
+    }
 }
 
+
 /*adds bottom border to drop down menus*/
-.hidden-shirts:after, .hidden-colors:after {
-    content:'';
+
+.hidden-shirts:after,
+.hidden-colors:after {
+    content: '';
     position: absolute;
     top: 100%;
     left: 0;
@@ -238,18 +252,17 @@ SHOW HIDDEN SIZE OPTIONS
 }
 
 
-
-/*------------------------------
+/*--------------------------------------------------
 SHOW HIDDEN COLOR OPTIONS
-------------------------------*/
-
-
+--------------------------------------------------*/
 
 .icon:nth-child(4) {
     position: relative;
 }
 
+
 /*reveals color drop down menu*/
+
 .icon:hover > .hidden-colors {
     display: block;
 }
@@ -268,7 +281,10 @@ SHOW HIDDEN COLOR OPTIONS
     animation: slide-down .4s 1;
 }
 
-.blue, .pink, .orange, .green {
+.blue,
+.pink,
+.orange,
+.green {
     height: 20px;
     width: 20px;
     display: inline-block;
@@ -281,7 +297,7 @@ SHOW HIDDEN COLOR OPTIONS
 }
 
 .pink {
-	background-color: palevioletred;
+    background-color: palevioletred;
 }
 
 .orange {
@@ -299,10 +315,9 @@ button {
 }
 
 
-/*------------------------------
+/*--------------------------------------------------
 TSHIRT FLIP
-------------------------------*/
-
+--------------------------------------------------*/
 
 
 /*.flip:active + .tshirt {
@@ -310,17 +325,14 @@ TSHIRT FLIP
 }*/
 
 
-
-/*------------------------------
+/*--------------------------------------------------
 MEDIA QUERIES
-------------------------------*/
-
-
+--------------------------------------------------*/
 
 @media (max-width: 1050px) {
     .main-box {
         width: 45%;
-        display:inline-block;
+        display: inline-block;
     }
 }
 
@@ -331,7 +343,6 @@ MEDIA QUERIES
         margin: 1% auto;
     }
 }
-
 
 
 /*
